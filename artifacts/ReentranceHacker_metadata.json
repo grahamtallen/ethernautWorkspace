@@ -1,0 +1,114 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "_reentranceAddress",
+						"type": "address"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "attack",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "reentrance",
+				"outputs": [
+					{
+						"internalType": "contract IReentrance",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "to",
+						"type": "address"
+					}
+				],
+				"name": "sendBack",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/ReentranceHacker.sol": "ReentranceHacker"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Reentrance.sol": {
+			"keccak256": "0x7f5b90864582c0acd4b989f649c8482cdeedf159508957c5f64498598bdc5f79",
+			"urls": [
+				"bzz-raw://cef11e3e5ae633ac2764f387e55050f3a5b5d208ae98d8671d27a5e3f352e3b1",
+				"dweb:/ipfs/QmPyd6BMGaaJRMfqvJWo94Tq47xBxovq4ePLZMwAwsM6R1"
+			]
+		},
+		"contracts/ReentranceHacker.sol": {
+			"keccak256": "0x75acf40c299e7a6cc686eb0ffd34dcd6d20f9cc1d02ce85fc71e42f339d6b68d",
+			"license": "GPL-3.0",
+			"urls": [
+				"bzz-raw://461da4e694c9f154009e94955b0506c99cd93d105404a15e8e6b080a670bae4c",
+				"dweb:/ipfs/QmRtdDwxfkE5qUo8WU94kGguYX8nnFafJcUHYmhdfjZWKj"
+			]
+		}
+	},
+	"version": 1
+}

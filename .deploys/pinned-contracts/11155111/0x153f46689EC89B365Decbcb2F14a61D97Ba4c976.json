@@ -1,0 +1,58 @@
+{
+  "name": "Privacy",
+  "address": "0x153f46689EC89B365Decbcb2F14a61D97Ba4c976",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32[3]",
+          "name": "_data",
+          "type": "bytes32[3]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes16",
+          "name": "_key",
+          "type": "bytes16"
+        }
+      ],
+      "name": "unlock",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "ID",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "locked",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "filePath": "default_workspace/contracts/Privacy.sol",
+  "pinnedAt": 1755045393369
+}

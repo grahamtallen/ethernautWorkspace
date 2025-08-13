@@ -1,0 +1,67 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"stateMutability": "payable",
+				"type": "fallback"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address payable",
+						"name": "kingContract",
+						"type": "address"
+					}
+				],
+				"name": "attack",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"stateMutability": "payable",
+				"type": "receive"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/KingHacker.sol": "KingHacker"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/KingHacker.sol": {
+			"keccak256": "0x3d862af43a53493ebfef3e7fdb0630e36c54e0e2637631a20f182ebacca1e90a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ff67d325388e0134dc9ea98ca294222dba0cc0c4d312855880122152724789c7",
+				"dweb:/ipfs/QmeYGurwdbEqPZemyX5r5UWr2RBEMt7WgbJJH4GHTsZrH9"
+			]
+		}
+	},
+	"version": 1
+}
