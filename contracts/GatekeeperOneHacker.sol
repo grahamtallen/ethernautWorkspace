@@ -4,8 +4,8 @@ pragma solidity ^0.8.0;
 import "./GatekeeperOne.sol";
 
 contract GatekeeperOneHacker {
-    GatekeeperOne gatekeeper;
-    uint256 constant gasCostOfGateOne = 140;
+    GatekeeperOne public gatekeeper;
+    uint256 constant public gasCostOfGateOne = 140;
     constructor(address _gatekeeper) {
         gatekeeper = GatekeeperOne(_gatekeeper);
     }
@@ -41,6 +41,18 @@ contract GatekeeperOneHacker {
             _returnData := add(_returnData, 0x04)
         }
         return abi.decode(_returnData, (string)); // All that remains is the revert string
+    }
+
+    function checkKey(bytes8 _gateKey, address txOrigin) public pure returns (bool[3] memory) {
+        return [
+            uint32(uint64(_gateKey)) == uint16(uint64(_gateKey)),
+            uint32(uint64(_gateKey)) != uint64(_gateKey),
+            uint32(uint64(_gateKey)) == uint16(uint160(txOrigin))
+        ];
+    }
+
+    function getDerivedKey(address txOrigin) public pure returns (bytes8) {
+        return bytes8(uint64(uint160(txOrigin))) & 0xFFFFFFFF0000FFFF;
     }
 
     

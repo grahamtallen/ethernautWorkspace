@@ -63,6 +63,75 @@
 				],
 				"stateMutability": "nonpayable",
 				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "bytes8",
+						"name": "_gateKey",
+						"type": "bytes8"
+					},
+					{
+						"internalType": "address",
+						"name": "txOrigin",
+						"type": "address"
+					}
+				],
+				"name": "checkKey",
+				"outputs": [
+					{
+						"internalType": "bool[3]",
+						"name": "",
+						"type": "bool[3]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gasCostOfGateOne",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gatekeeper",
+				"outputs": [
+					{
+						"internalType": "contract GatekeeperOne",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "txOrigin",
+						"type": "address"
+					}
+				],
+				"name": "getDerivedKey",
+				"outputs": [
+					{
+						"internalType": "bytes8",
+						"name": "",
+						"type": "bytes8"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
 			}
 		],
 		"devdoc": {
@@ -93,19 +162,19 @@
 	},
 	"sources": {
 		"contracts/GatekeeperOne.sol": {
-			"keccak256": "0x6eafd86cb526f7bc0996d29ad06cff650cb796e1b8f89cdf919f8b6cccff5c0d",
+			"keccak256": "0xdba82eb9784e2651c952e9fca54db37b8a02587583e6dfe3a5ab77d05aad737b",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://89a86161e26e6bb2307ac9e166bb98b3b680262f30bfe5322c0c6f6869699f2a",
-				"dweb:/ipfs/QmSuiMUqZXijuEUErmAhBVQYP7vVxCkoA8kwET7KEvWZn9"
+				"bzz-raw://c15fd3190bb20b6b022c08db2b9c3771b4d6707292e9a2e158f52ba5771a9293",
+				"dweb:/ipfs/QmQhbJ7za6sckHkvn4XihvWatRP8Xj6e8D1hccmXNzYfn3"
 			]
 		},
 		"contracts/GatekeeperOneHacker.sol": {
-			"keccak256": "0xecf6d29caa7386045f7452bffc4458a5d2fdb2adcdff12ba0e2085ea6b673037",
+			"keccak256": "0x022f6f2c401f812750b3d227f8ea31dcb4e95ee6905faf107cb6b9a98df14097",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://7126a1e9ac68daac9016b47c26307d203c4943a11e8e5a2740b76baf07d77a76",
-				"dweb:/ipfs/QmNPRL7GHc3przUSJn959LjRT1zhii2UoWFgzpUKPvjFgv"
+				"bzz-raw://67cf7c826207482193f31b4a89626f4f25afc8224c4c3c155b87a2ef9f2272f1",
+				"dweb:/ipfs/QmdsnYjasuhhNLzZyB4goddskhSusTRNTb3WaYQAWCzee5"
 			]
 		}
 	},
