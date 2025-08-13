@@ -86,11 +86,11 @@
 	},
 	"sources": {
 		"contracts/GatekeeperOne.sol": {
-			"keccak256": "0x25c1bfc040977fd8c9fc0036ab4d8b69dacda8a630c71e604bba40362b651229",
+			"keccak256": "0x6eafd86cb526f7bc0996d29ad06cff650cb796e1b8f89cdf919f8b6cccff5c0d",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://54e5df7d3068ec5bcdd282e6110564d7cf108342eb8d2426702c679f5add9314",
-				"dweb:/ipfs/QmQJ4KBxZNQku6z3bfb6jRg2TFy3mcrxiTvfWCFVyYkBdB"
+				"bzz-raw://89a86161e26e6bb2307ac9e166bb98b3b680262f30bfe5322c0c6f6869699f2a",
+				"dweb:/ipfs/QmSuiMUqZXijuEUErmAhBVQYP7vVxCkoA8kwET7KEvWZn9"
 			]
 		}
 	},

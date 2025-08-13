@@ -5,13 +5,13 @@ contract GatekeeperOne {
     address public entrant;
     uint256 public gasRemaining;
 
-    modifier gateOne() {
-        require(msg.sender != tx.origin, "failed gate 1");
+    modifier gateOne() { // uses 149 gas exactly
+        require(msg.sender != tx.origin, "Gate 1 Failure");
         _;
     }
 
     modifier gateTwo() {
-        require(gasleft() % 8191 == 0, "failed gate 2");
+        require(gasleft() % 8191 == 0, "Gate 2 Failure");
         _;
     }
 
