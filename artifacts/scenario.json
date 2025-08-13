@@ -1,0 +1,100 @@
+{
+  "accounts": {
+    "account{0}": "0x637875145e0Da1054A1C8259828257704BD78398"
+  },
+  "linkReferences": {},
+  "transactions": [
+    {
+      "timestamp": 1755053485543,
+      "record": {
+        "value": "0",
+        "inputs": "(address)",
+        "parameters": [
+          "0xBE55Cd6C38f47119DA10d13Ec9c3a7d149960eC3"
+        ],
+        "name": "",
+        "type": "constructor",
+        "abi": "0x0f9fc0f04c031b7b13eeed1272efd17f61e29415a6a04dba3823da81690beaef",
+        "contractName": "GatekeeperOneHacker",
+        "bytecode": "608060405234801561000f575f5ffd5b50604051610341380380610341833981810160405281019061003191906100d4565b805f5f6101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550506100ff565b5f5ffd5b5f73ffffffffffffffffffffffffffffffffffffffff82169050919050565b5f6100a38261007a565b9050919050565b6100b381610099565b81146100bd575f5ffd5b50565b5f815190506100ce816100aa565b92915050565b5f602082840312156100e9576100e8610076565b5b5f6100f6848285016100c0565b91505092915050565b6102358061010c5f395ff3fe608060405234801561000f575f5ffd5b5060043610610029575f3560e01c80634ad5d16f1461002d575b5f5ffd5b61004760048036038101906100429190610128565b610049565b005b5f5f90505b818110156100ed575f5a90507fd6dca172e276f53402f777ced9d49668ea6fb3e2c3f241df4bc1ff2370ffb2e5816040516100899190610162565b60405180910390a15f611fff826100a091906101a8565b036100df577f3607b9ce9728ea211b780db4ff9abaca1c5ea83d7419489c3c828e9c6f432c98815a6040516100d69291906101d8565b60405180910390a15b50808060010191505061004e565b5050565b5f5ffd5b5f819050919050565b610107816100f5565b8114610111575f5ffd5b50565b5f81359050610122816100fe565b92915050565b5f6020828403121561013d5761013c6100f1565b5b5f61014a84828501610114565b91505092915050565b61015c816100f5565b82525050565b5f6020820190506101755f830184610153565b92915050565b7f4e487b71000000000000000000000000000000000000000000000000000000005f52601260045260245ffd5b5f6101b2826100f5565b91506101bd836100f5565b9250826101cd576101cc61017b565b5b828206905092915050565b5f6040820190506101eb5f830185610153565b6101f86020830184610153565b939250505056fea2646970667358221220cf1463e583a750acb7e070180e1887af2ebfa816e358fc0e05588cbee80d32bc64736f6c634300081e0033",
+        "linkReferences": {},
+        "from": "account{0}"
+      }
+    },
+    {
+      "timestamp": 1755053509875,
+      "record": {
+        "value": "0",
+        "inputs": "(uint256)",
+        "parameters": [
+          "10"
+        ],
+        "name": "burnGas",
+        "type": "function",
+        "to": "created{1755053485543}",
+        "abi": "0x0f9fc0f04c031b7b13eeed1272efd17f61e29415a6a04dba3823da81690beaef",
+        "from": "account{0}"
+      }
+    }
+  ],
+  "abis": {
+    "0x0f9fc0f04c031b7b13eeed1272efd17f61e29415a6a04dba3823da81690beaef": [
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "iterations",
+            "type": "uint256"
+          }
+        ],
+        "name": "burnGas",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_gatekeeper",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "gasLeft",
+            "type": "uint256"
+          }
+        ],
+        "name": "GasLeft",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "gasLeft",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "gasLeftCurrent",
+            "type": "uint256"
+          }
+        ],
+        "name": "GasValueCorrect",
+        "type": "event"
+      }
+    ]
+  }
+}
