@@ -17,6 +17,25 @@
 				"type": "constructor"
 			},
 			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "attempt",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "reason",
+						"type": "string"
+					}
+				],
+				"name": "DebugRevertReason",
+				"type": "event"
+			},
+			{
 				"inputs": [
 					{
 						"internalType": "bytes8",
@@ -25,12 +44,12 @@
 					},
 					{
 						"internalType": "uint256",
-						"name": "startGasIteorator",
+						"name": "startIter",
 						"type": "uint256"
 					},
 					{
 						"internalType": "uint256",
-						"name": "endGasIteorator",
+						"name": "endIter",
 						"type": "uint256"
 					}
 				],
@@ -82,11 +101,11 @@
 			]
 		},
 		"contracts/GatekeeperOneHacker.sol": {
-			"keccak256": "0xd525c2a60bf0b71a7922304e37c88534d20486d599988c995b247932f726b8c7",
+			"keccak256": "0xecf6d29caa7386045f7452bffc4458a5d2fdb2adcdff12ba0e2085ea6b673037",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://52e43c39660568fa2c03dff26dcd693f01485239cc67bb30c7802afc5ab2aa6c",
-				"dweb:/ipfs/QmdXgA5S8bGoaHJRCAjo7PqBy56C4F7nQNfHAWMDAxLq7U"
+				"bzz-raw://7126a1e9ac68daac9016b47c26307d203c4943a11e8e5a2740b76baf07d77a76",
+				"dweb:/ipfs/QmNPRL7GHc3przUSJn959LjRT1zhii2UoWFgzpUKPvjFgv"
 			]
 		}
 	},
