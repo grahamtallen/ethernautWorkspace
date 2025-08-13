@@ -17,9 +17,21 @@
 				"type": "constructor"
 			},
 			{
-				"inputs": [],
-				"name": "callGatekeeper",
-				"outputs": [],
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "gasAmt",
+						"type": "uint256"
+					}
+				],
+				"name": "bruteForceEnter",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
 				"stateMutability": "nonpayable",
 				"type": "function"
 			}
@@ -52,19 +64,19 @@
 	},
 	"sources": {
 		"contracts/GatekeeperOne.sol": {
-			"keccak256": "0xdba82eb9784e2651c952e9fca54db37b8a02587583e6dfe3a5ab77d05aad737b",
+			"keccak256": "0x25c1bfc040977fd8c9fc0036ab4d8b69dacda8a630c71e604bba40362b651229",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c15fd3190bb20b6b022c08db2b9c3771b4d6707292e9a2e158f52ba5771a9293",
-				"dweb:/ipfs/QmQhbJ7za6sckHkvn4XihvWatRP8Xj6e8D1hccmXNzYfn3"
+				"bzz-raw://54e5df7d3068ec5bcdd282e6110564d7cf108342eb8d2426702c679f5add9314",
+				"dweb:/ipfs/QmQJ4KBxZNQku6z3bfb6jRg2TFy3mcrxiTvfWCFVyYkBdB"
 			]
 		},
 		"contracts/GatekeeperOneHacker.sol": {
-			"keccak256": "0x331ae0a774dae355c9065ef64de0a2f74e5dbac0eeb84fcc517a4436176c7ac0",
+			"keccak256": "0x899ee1c7cf4b0031e19a3f4a1270e11d5dbd08b2816c2f79ae61343f836803c2",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c23283377d48286f9e1c402955106d6f14dff6423ee8e3fecfb543bb19c08975",
-				"dweb:/ipfs/QmQsC8FwjTWwsVsxa6LPN66iQVuMbh871SrrnGw7Lbx2aa"
+				"bzz-raw://452983e4727b1b6a5c479390c4f47e05d5e1adbf472e4594ccec3afdef4c661d",
+				"dweb:/ipfs/Qmb6d9b6oxsn4AXVfVmgzziu4hHaRDUrUkvCi3oc7Dw5zs"
 			]
 		}
 	},

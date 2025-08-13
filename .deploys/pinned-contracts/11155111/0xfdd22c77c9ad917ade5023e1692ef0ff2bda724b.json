@@ -1,0 +1,26 @@
+{
+  "name": "GatekeeperOneHacker",
+  "address": "0xfdd22c77c9ad917ade5023e1692ef0ff2bda724b",
+  "abi": [
+    {
+      "inputs": [],
+      "name": "callGatekeeper",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_gatekeeper",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    }
+  ],
+  "filePath": "ethernautWorkspace-1755053021163/contracts/GatekeeperOneHacker.sol",
+  "pinnedAt": 1755055746022
+}

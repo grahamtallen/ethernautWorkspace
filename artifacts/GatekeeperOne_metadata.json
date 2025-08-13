@@ -6,13 +6,7 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [
-					{
-						"internalType": "bytes8",
-						"name": "_gateKey",
-						"type": "bytes8"
-					}
-				],
+				"inputs": [],
 				"name": "enter",
 				"outputs": [
 					{
@@ -35,6 +29,32 @@
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gasRemaining",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "gateTwoFn",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -66,11 +86,11 @@
 	},
 	"sources": {
 		"contracts/GatekeeperOne.sol": {
-			"keccak256": "0xdba82eb9784e2651c952e9fca54db37b8a02587583e6dfe3a5ab77d05aad737b",
+			"keccak256": "0x25c1bfc040977fd8c9fc0036ab4d8b69dacda8a630c71e604bba40362b651229",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://c15fd3190bb20b6b022c08db2b9c3771b4d6707292e9a2e158f52ba5771a9293",
-				"dweb:/ipfs/QmQhbJ7za6sckHkvn4XihvWatRP8Xj6e8D1hccmXNzYfn3"
+				"bzz-raw://54e5df7d3068ec5bcdd282e6110564d7cf108342eb8d2426702c679f5add9314",
+				"dweb:/ipfs/QmQJ4KBxZNQku6z3bfb6jRg2TFy3mcrxiTvfWCFVyYkBdB"
 			]
 		}
 	},
