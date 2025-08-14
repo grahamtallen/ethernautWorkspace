@@ -29,22 +29,15 @@ contract GatekeeperOneHacker {
     function getDerivedKey(address txOrigin) public pure returns (bytes8) {
         return bytes8(uint64(uint160(txOrigin))) & 0xFFFFFFFF0000FFFF;
     }
-    // Call gatekeeper.enter with variable gas and return gas used
-    function measureGateOneOffset() external returns (uint256) {
+
+    function measureGateOneOffset() external view returns (uint256) {
         uint256 startGas = gasleft();
-
-        // Call gatekeeper.enter with a dummy key and minimal gas
-        // We expect it to revert at gateOne, but we can still measure gas
-        bytes8 dummyKey = bytes8(0);
-        try gatekeeper.enter{gas: 1_000_000}(dummyKey) {
-            // normally never reaches here
-        } catch {
-            // ignore revert
-        }
-
-        uint256 gasUsed = startGas - gasleft();
-        return gasUsed;
+        // Only call the gateOne modifier logic
+        require(msg.sender != tx.origin, "Failed gate 1");
+        uint256 used = startGas - gasleft();
+        return used;
     }
+
 
     // function eip150Check() external returns (uint256) {
     //     uint256 before = gasleft();

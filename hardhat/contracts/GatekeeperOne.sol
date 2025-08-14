@@ -5,12 +5,12 @@ contract GatekeeperOne {
     address public entrant;
 
     modifier gateOne() {
-        require(msg.sender != tx.origin, "Failed gate 1");
+        require(msg.sender != tx.origin);
         _;
     }
 
     modifier gateTwo() {
-        require(gasleft() % 8191 == 0, "Failed gate 2");
+        require(gasleft() % 8191 == 0);
         _;
     }
 
